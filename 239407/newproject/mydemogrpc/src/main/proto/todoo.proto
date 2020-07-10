@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+
+package todoPackage;
+
+option java_multiple_files = true;
+option java_outer_classname = "Foo";
+option java_package = "com.jgainey.demo";
+
+
+service toDooService {
+  rpc createToDo (TodooItem) returns (TodooItem);
+  rpc readTodoos(nully) returns (TodooItems);
+}
+
+
+message TodooItem {
+  int32 id = 1;
+  string text = 2;
+}
+
+
+message TodooItems {
+  repeated TodooItem items = 1;
+}
+
+message nully{};
